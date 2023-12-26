@@ -6,7 +6,7 @@
 
     <groupId>com.mmasata.library</groupId>
     <artifactId>custom-utils</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -14,9 +14,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit-version>5.10.1</junit-version>
         <mockito-version>5.8.0</mockito-version>
+        <lombok-version>1.18.30</lombok-version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok-version}</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>

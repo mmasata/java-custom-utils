@@ -6,6 +6,7 @@ import com.mmasata.util.exception.MethodNotImplementedException;
 import com.mmasata.util.helper.SortedLinkedListHelper;
 import com.mmasata.util.iterator.SortedLinkedListIterator;
 import com.mmasata.util.model.Node;
+import lombok.NoArgsConstructor;
 
 import java.util.Collection;
 import java.util.Comparator;
@@ -16,6 +17,8 @@ import java.util.function.IntFunction;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+import static lombok.AccessLevel.PRIVATE;
+
 /**
  * Custom implementation of the LinkedList data structure that also follows sorting rules.
  * <p>
@@ -25,20 +28,17 @@ import java.util.stream.Stream;
  *
  * @param <T>
  */
+@NoArgsConstructor(access = PRIVATE)
 public class SortedLinkedListImpl<T> implements SortedLinkedList<T> {
 
-    private transient Comparator<T> comparator;
+    private Comparator<T> comparator;
 
-    private transient SortedLinkedListHelper helper;
+    private SortedLinkedListHelper helper;
 
-    private transient Node<T> head;
+    private Node<T> head;
 
-    private transient int size = 0;
+    private int size = 0;
 
-
-    private SortedLinkedListImpl() {
-        // PRIVATE CONSTRUCTOR
-    }
 
     /**
      * Static method constructing data structure for Strings
