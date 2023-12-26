@@ -1,3 +1,15 @@
+# Changelog
+
+## 1.0.1
+
+- Code cleanup
+- Removing boilerplate code and replacing with Lombok
+
+## 1.0.0
+
+- Initial commit
+- Add SortedLinkedList
+
 # Usage
 
 ## Import dependency
@@ -9,7 +21,7 @@
 <dependency>
     <groupId>com.mmasata.library</groupId>
     <artifactId>custom-utils</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
@@ -92,8 +104,9 @@ public class ExampleClass {
     - Theoretically, we could optimize the contains operation to O(1)
     - On the other hand, there is again the disadvantage that the data structure would be more memory complex
 - Make a data structure based on primitive int instead of autoboxing values (Integer)
-  - Autoboxing of values is a standard thing in Java, but the object takes more memory than a primitive value
-  - There are several disadvantages
-    - Could not apply Java generics without autoboxing (Generics can only work with objects)
-    - Implementations for int and String would be different, it would not be possible to reuse the code so much. This would lead to duplication.
-    - NOTICE: I definitely do not recommend this optimization, only a theoretical consideration
+    - Autoboxing of values is a standard thing in Java, but the object takes more memory than a primitive value
+    - There are several disadvantages
+        - Could not apply Java generics without autoboxing (Generics can only work with objects)
+        - Implementations for int and String would be different, it would not be possible to reuse the code so much.
+          This would lead to duplication.
+        - NOTICE: I definitely do not recommend this optimization, only a theoretical consideration

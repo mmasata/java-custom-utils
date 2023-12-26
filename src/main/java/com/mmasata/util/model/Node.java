@@ -1,5 +1,8 @@
 package com.mmasata.util.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 /**
  * Container for generic entry in custom collections.
  * <p>
@@ -7,6 +10,8 @@ package com.mmasata.util.model;
  *
  * @param <T> Generic value of the collection
  */
+@Data
+@AllArgsConstructor
 public class Node<T> {
 
     private T value;
@@ -16,36 +21,6 @@ public class Node<T> {
 
     public Node(T value) {
         this.value = value;
-    }
-
-    public Node(T value,
-                Node<T> prev,
-                Node<T> next) {
-
-        this.value = value;
-        this.prev = prev;
-        this.next = next;
-    }
-
-
-    public T getValue() {
-        return value;
-    }
-
-    public Node<T> getPrev() {
-        return prev;
-    }
-
-    public Node<T> getNext() {
-        return next;
-    }
-
-    public void setPrev(Node<T> prev) {
-        this.prev = prev;
-    }
-
-    public void setNext(Node<T> next) {
-        this.next = next;
     }
 
     /**
